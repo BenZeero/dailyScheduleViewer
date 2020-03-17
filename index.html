@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+		<title> Daily Shipping Schedule </title>
+	</head>
+	
+	<body>
+		<div class="top">
+			<div class="project__header">
+				<div class="date__title">
+					<span class="date__title--date"> %date% </span> Shipping Schedule
+				</div>
+			</div>
+		</div>
+		
+		<div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="urgent" selected>Urgent</option>
+                        <option value="normal">Normal</option>
+						<option value="low">Low</option>
+                    </select>
+                    <input type="text" class="add__project" placeholder="Add description">
+                    <input type="number" class="add__qty" placeholder="Quantity">
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                </div>
+            </div>
+
+			<div class="container clearfix">
+				<div class="project">
+					<div class="project__list">
+						<div class="item clearfix">
+							<div class="title__header">
+								<div class="title__priority">Priority</div>
+								<div class="title__name">Project Name</div>
+								<div class="right clearfix">
+									<div class="title__shipped">QTY to Ship</div>
+									<div class="title__shipped">Shipped</div>
+								</div>
+							</div>
+                        </div>
+						<div class="item clearfix" id="project-0">
+							<select class="project__type">
+								<option value="urgent" selected>Urgent</option>
+								<option value="normal">Normal</option>
+								<option value="low">Low</option>
+							</select>
+							<div class="project__name">X1412 DEV</div>
+							<div class="right clearfix">
+								<div class="project__qty--expect">50</div>
+								<div class="project__qty--actual">50</div>
+								<div class="project__delete">
+									<button class="project__delete--btn"><i class="ion-ios-close-outline"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="item clearfix" id="project-1">
+							<select class="project__type">
+								<option value="urgent" selected>Urgent</option>
+								<option value="normal">Normal</option>
+								<option value="low">Low</option>
+							</select>
+							<div class="project__name">X2135 MLB</div>
+							<div class="right clearfix">
+								<div class="project__qty--expect">50</div>
+								<div class="project__qty--actual">50</div>
+								<div class="project__delete">
+								<button class="project__delete--btn"><i class="ion-ios-close-outline"></i></button>
+								</div>
+							</div>
+                        </div>
+					</div>
+				</div>
+			</div>	
+		<script src="app.js"></script>
+	</body>	
+</html>

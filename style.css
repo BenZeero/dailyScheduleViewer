@@ -1,0 +1,239 @@
+/************************************
+*** GENERAL
+************************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {
+	color: #555;
+	font-family: Calibri;
+	font-size: 36px;
+	position: relative;
+	height: 100vh;
+	font-weight: 400;
+}
+
+.right {float: right;}
+
+/************************************
+*** TOP
+************************************/
+
+.top {
+    height: 15vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.project__header {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.date__title {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: 400;
+}
+
+/************************************
+*** BOTTOM - INPUT
+************************************/
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type {
+    width: auto;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add__project,
+.add__qty {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.add__project { width: 400px;}
+.add__qty{ width: 100px;}
+
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); }
+
+.add__type:focus,
+.add__project:focus,
+.add__qty:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add__btn:focus { outline: none; }
+
+/************************************
+*** BOTTOM - LIST
+************************************/
+
+.container {
+	width: 100%;
+	margin: 20& auto;
+}
+
+.project {
+	float: left;
+	width: 80%;
+	margin: 15px 10% 15px 10%;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom:15px;
+}
+
+.item {
+    padding: 2px;
+    border-bottom: 1px solid #000000;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.item:first-child { border-top: 1px solid #ababab; }
+.item:nth-child(even) { background-color: #ded3d3; }
+
+
+.title__header{
+	float: left;
+	width: 100%;
+}
+
+.title__priority {
+	float: left;
+	margin-right: 10%;
+}
+.title__header .title__name{
+	float: left;
+}
+
+
+.title__header .title__shipped{
+	float: left;
+	margin-right: 40px;
+}
+
+.project__type {
+	width: auto;
+    height: 44px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    transition: border 0.3s;
+	float: left;
+	font-size: 30px;
+	font-weight: 400;
+	margin: 5px 25px 5px 0;
+}
+.project__name {
+	float: left;
+	margin: 5px 0 5px 0;
+	
+}
+
+.project__qty--expect {
+    float: left;
+	transition: transform 0.3s;
+	color: #FFFFFF;
+	margin: 5px 75px 5px 0;
+	background: #28B9B5;
+	width: 70px;
+	padding: 3px;
+	text-align: center;
+}
+.project__qty--actual {
+    float: left;
+	transition: transform 0.3s;
+	color: #FFFFFF;
+	margin: 5px 30px 5px 0;
+	background: #FF5049;
+	width: 70px;
+	padding: 3px;
+	text-align: center;
+}
+.project__delete {
+    float: left;
+}
+
+.project__delete--btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 1;
+	color: #28B9B5;
+	padding: 5px 2px 0 2px;
+}
+
+/* .project__delete--btn:focus { outline: none; }
+.project__delete--btn:active { transform: translateY(2px); }
+
+.project:hover .project__delete--btn { display: block; }
+.project:hover .project__qty--actual { transform: translateX(-40px); }
+.project:hover .project__qty--expect { transform: translateX(-40px); } */
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid:hover .project__name { font-weight: 900; }
